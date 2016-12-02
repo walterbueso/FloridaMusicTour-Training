@@ -250,3 +250,17 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/MusicTourTraining/App_Browsers
+/MusicTourTraining/App_Data
+/MusicTourTraining/App_Plugins/ModelsBuilder
+/MusicTourTraining/Config
+/MusicTourTraining/Properties
+/MusicTourTraining/Umbraco
+/MusicTourTraining/Umbraco_Client
+/MusicTourTraining/default.aspx
+*.asax
+*.csproj
+/MusicTourTraining/packages.config
+/MusicTourTraining/Web.config
+/MusicTourTraining/Web.Debug.config
+/MusicTourTraining/Web.Release.config

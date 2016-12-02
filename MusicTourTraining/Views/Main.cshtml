@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+    
+}
+
+@if (CurrentPage.Children.Count() > 0)
+{
+   
+        foreach (var gal in CurrentPage.Children.InGroupsOf(3))
+        {
+        <div class="row">
+            @foreach (var item in gal)
+            {
+                <div class="col-sm-4">
+                    <h2>@item.Name</h2>
+                    <div class="portfolio-item portfolio-meta-slideup">
+                        <figure>
+                            <a href="@item.Url" class="zoom-item" title="@item.Name"><img src="@item.GetCropUrl("snapshot","img")" alt="portfolio item name" class="img-responsive"></a>
+                        </figure>
+                        <div class="portfolio-meta custom">
+                            @*<h3 class="portfolio-title"><a href="single-portfolio.html">@item.Name</a></h3>*@
+                            <div class="portfolio-tags"><a href="@item.Url">Create content on @item.Name</a></div>
+                            @*<a class="portfolio-favourite" href="@item.Url" title="Click here">
+                                    <i class="fa fa-link"></i>
+                                </a>*@
+                        </div><!-- End .portfolio-meta -->
+                    </div><!-- End .portfolio-item -->
+                </div><!-- End .col-sm-3 -->
+            }
+        </div>
+        }
+}
+
+
